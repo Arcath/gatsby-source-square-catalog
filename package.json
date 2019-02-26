@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-source-square-catalog",
+  "version": "0.0.0",
+  "description": "Gatsby source from the SquareUP catalog",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "tsc & jest",
+    "compile": "tsc",
+    "prepublishonly": "npm run compile"
+  },
+  "keywords": [
+    "gatsby",
+    "source",
+    "square",
+    "catalog"
+  ],
+  "author": "Adam Laycock <adam@arcath.net>",
+  "license": "MIT",
+  "dependencies": {
+    "square-connect": "^2.20190213.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.9",
+    "jest": "^24.1.0",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333"
+  }
+}
