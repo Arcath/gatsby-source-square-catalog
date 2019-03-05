@@ -35,6 +35,9 @@ declare module 'square-connect'{
   interface CatalogCategory extends CatalogEntry{
     type: 'CATEGORY'
     items___NODE?: string[]
+    category_data: {
+      name: string
+    }
   }
 
   interface CatalogItem extends CatalogEntry{

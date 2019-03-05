@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-square-catalog",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Gatsby source from the SquareUP catalog",
   "main": "gatsby-node.js",
   "types": "lib/index.d.ts",

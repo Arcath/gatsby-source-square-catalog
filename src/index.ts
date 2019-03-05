@@ -36,13 +36,12 @@ export const sourceNodes = async (gatsby: SourceNodesGatsby, config: GatsbySourc
   const {createNode} = actions
 
   const createCategoryNode = (category: SquareConnect.CatalogCategory) => {
-    category.items___NODE = categoryItems[category.id]
-
-    const nodeData = Object.assign({}, category, {
+    const nodeData = Object.assign({}, category.category_data, {
       id: categoryMappings[category.id],
       categoryId: category.id,
       parent: null,
       children: [],
+      items___NODE: categoryItems[category.id],
       internal: {
         type: `SquareCategory`,
         content: JSON.stringify(category),
@@ -54,16 +53,16 @@ export const sourceNodes = async (gatsby: SourceNodesGatsby, config: GatsbySourc
   }
 
   const createItemNode = (item: SquareConnect.CatalogItem) => {
-     item.category___NODE = categoryMappings[item.item_data.category_id]
      item.modifiers___NODE = (item.item_data.modifier_list_info ? item.item_data.modifier_list_info : []).map((entry) => {
        return modifierMappings[entry.modifier_list_id]
      })
 
-     const nodeData = Object.assign({}, item, {
+     const nodeData = Object.assign({}, item.item_data, {
       id: itemMappings[item.id],
       itemId: item.id,
       parent: null,
       children: [],
+      category___NODE: categoryMappings[item.item_data.category_id],
       internal: {
         type: `SquareItem`,
         content: JSON.stringify(item),
