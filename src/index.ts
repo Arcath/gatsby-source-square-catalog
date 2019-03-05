@@ -139,7 +139,7 @@ export const sourceNodes = async (gatsby: SourceNodesGatsby, config: GatsbySourc
               modifierItems[entry.modifier_list_id] = []
             }
 
-            modifierItems[entry.modifier_list_id].push(object.id)
+            modifierItems[entry.modifier_list_id].push(itemMappings[object.id])
           })
         }
       break
