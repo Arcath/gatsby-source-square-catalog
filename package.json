@@ -1,13 +1,13 @@
 {
   "name": "gatsby-source-square-catalog",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Gatsby source from the SquareUP catalog",
   "main": "gatsby-node.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "tsc & jest",
     "compile": "tsc",
-    "prepublishonly": "npm run compile"
+    "prepublishOnly": "npm run compile"
   },
   "keywords": [
     "gatsby",
